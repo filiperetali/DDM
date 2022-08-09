@@ -1,0 +1,34 @@
+
+import { Image, StatusBar, StyleSheet, Text, View } from 'react-native';
+import imagem from './assets/favicon.png'
+
+export default function App() {
+  return (
+    <View style={styles.container}>    
+      <Text style={styles.texto}>Olá mundo!</Text>
+      <Image
+        source={imagem}
+        style={styles.imagem}
+      />
+      <StatusBar  />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#a3a3a3',
+    alignItems: 'center',    
+    justifyContent: 'center',
+  },
+  texto: {
+    color:'white',
+  },
+  imagem: {
+    border: '15px solid transparent',
+    justifyContent:'center',
+    height:50, width:50,
+    backgroundColor:'red',
+  }
+});
